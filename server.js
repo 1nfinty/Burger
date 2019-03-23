@@ -1,15 +1,12 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
 var bodyParser = require('body-parser');
-// var methodOverride = require('method-override');
-// new npm package
+
 var app = express();
 
 app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.urlencoded({extended: false}))
-
-// app.use(methodOverride('_method'));
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
 
